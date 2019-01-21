@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/redux-cats/static/media/fa-solid-900.8086e197.woff2"
   },
   {
-    "revision": "8e286c722027e1877195",
+    "revision": "dfb39c73a919c8ae6d12",
     "url": "/redux-cats/static/css/main.e5f445e0.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/redux-cats/static/media/fa-brands-400.b89c6c51.woff2"
   },
   {
-    "revision": "8e286c722027e1877195",
-    "url": "/redux-cats/static/js/main.8e286c72.chunk.js"
+    "revision": "dfb39c73a919c8ae6d12",
+    "url": "/redux-cats/static/js/main.dfb39c73.chunk.js"
   },
   {
     "revision": "dd4ff1196905f0585aef2c80486869e9",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/redux-cats/static/css/1.28193442.chunk.css"
   },
   {
-    "revision": "078eba04b336fbc65dcd0abd443a3c8c",
+    "revision": "92fa1faca2011e707aecd7ee75ee3af7",
     "url": "/redux-cats/index.html"
   }
 ];
