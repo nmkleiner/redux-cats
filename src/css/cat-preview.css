@@ -1,0 +1,39 @@
+.cat-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:darkcyan; 
+    width: fit-content;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    
+    font-size: 1.1rem;
+}
+
+.cat-preview:hover {
+    background-color: rgb(0, 170, 170);
+}
+
+.cat-preview button{
+    cursor: pointer;
+}
+
+.cat-preview a{
+    color: orangered;
+    text-decoration: none;
+}
+
+.cat-preview a{
+    padding: 5px 0;
+}
+
+.cat-preview img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid gray;
+}

@@ -1,0 +1,40 @@
+
+.cat-edit  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.cat-edit form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-edit button,input,select {
+    margin: 10px 0;
+    height: 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.cat-edit label {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+ .cat-edit input,select,option {
+     flex-grow: 1;
+     margin-left: 10px;
+    } 
+    
+.cat-edit select {
+    color: teal;
+    font-weight: 700;
+    height: 28px;
+}
+
+.cat-edit button {
+    align-self: center;
+}

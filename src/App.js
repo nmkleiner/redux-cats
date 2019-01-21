@@ -1,26 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CatsPage from './pages/CatsPage';
+import CatDetails from './pages/CatDetails';
+import CatEdit from './pages/CatEdit';
+import HomePage from './pages/HomePage';
+import Navbar from './cmps/Navbar';
+import store from './store/store';
+
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>        
+        <div className="App">
+          
+          <Navbar/>
+
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/cat" exact component={CatsPage} />
+            <Route
+              render={props => {
+                return <CatEdit {...props} />;
+              }}
+              path="/cat/edit/:id"
+            />
+            <Route
+              path="/cat/:id"
+              render={props => {
+                return <CatDetails {...props} store={store} />;
+              }}
+            />
+             {/* /> */}
+             {/* <Route path="/statistics" component={StatisticPage} /> */}
+             {/* <Route path="/signup" render={(props) => { */}
+               {/* return <SignupPage {...props} handleSubmit={this.handleSubmit.bind(this)}/>}} />  */}
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

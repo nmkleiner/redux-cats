@@ -1,0 +1,12 @@
+.cats-page {
+    background-color: rgb(197, 226, 236);
+    min-height: calc(100vh - 46px)
+}
+
+.cat-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 10px;
+}

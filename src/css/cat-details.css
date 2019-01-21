@@ -1,0 +1,16 @@
+.cat-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: lightblue;
+    min-height: calc(100vh - 46px);
+    font-size: 1.3rem;
+}
+.cat-details img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid gray;
+}
+

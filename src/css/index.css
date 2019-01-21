@@ -1,0 +1,16 @@
+@import './reset.css';
+@import './animate.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@import './helpers.css';
+@import './scrollbar.css';
+
+
+@import './cats-page.css';
+@import './nav-bar.css';
+@import './cat-edit.css';
+
+
+
+@import './cat-preview.css';
+@import './cat-details.css';
