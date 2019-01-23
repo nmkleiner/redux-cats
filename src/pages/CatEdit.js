@@ -8,10 +8,9 @@ class CatEdit extends Component {
 
   constructor(props) {
     super()
-
-    let { id } = props.match.params;
-    if (id === 'new') {
-      id = utilService.makeId(6)
+    this.id = props.match.params.id;
+    if (this.id === 'new') {
+      const id = utilService.makeId(6)
       this.state = {
         selectedCat: { id, name: '', age: '', gender: '',rank:0, pic: 'https://cataas.com/cat' },
         toCatsPage: false,
@@ -21,7 +20,7 @@ class CatEdit extends Component {
     }
     else {
       this.state = {
-        selectedCat: { ...props.selectedCat },
+        selectedCat: props.selectedCat,
         toCatsPage: false,
         toCatDetails: false
       }
@@ -29,11 +28,13 @@ class CatEdit extends Component {
   }
 
   async componentDidMount() {
-    let { id } = this.props.match.params;
-    if (id !== 'new') {
-      this.props.onEditLoad(id)
-      this.setState({ selectedCat: { ...this.props.selectedCat, } })
+    // let { id } = this.props.match.params;
+    if (this.id !== 'new') {
+      await this.props.onLoad()
+      this.props.onEditLoad(this.id)
+      this.setState({ selectedCat: this.props.selectedCat })
     }
+
   }
   handleNameChange = (ev) => {
     const { value } = ev.target
@@ -50,61 +51,77 @@ class CatEdit extends Component {
 
   render() {
     if (this.state.toCatsPage === true) {
-      return <Redirect to='/cat' />
+      return <Redirect to='/redux-cats/cat' />
     }
     if (this.state.toCatDetails === true) {
-      return <Redirect to={'/cat/' + this.state.selectedCat.id} />
+      return <Redirect to={'/redux-cats/cat/' + this.state.selectedCat.id} />
     }
     return (
-      <div className="cat-edit">
-        {this.props.selectedCat &&
-          <Link to={'/cat/' + this.props.selectedCat.id}>
-            <i className="fas fa-arrow-left"></i>
-          </Link>
-        }
+      <React.Fragment>
+        {
+          this.props.selectedCat &&
+            <div className="cat-edit">
+              {this.id !== 'new' &&
+                <Link to={'/redux-cats/cat/' + this.props.selectedCat.id}>
+                  <i className="fas fa-arrow-left"></i>
+                </Link>
+              }
 
-        <form onSubmit={this.props.onSubmitCat.bind(this)}>
-          <label>
-            Name:
-              <input type="text"
-              value={this.state.selectedCat.name}
-              onChange={this.handleNameChange}
-            />
-          </label>
-          <label>
-            Age:
-              <input type="number"
-              value={this.state.selectedCat.age}
-              onChange={this.handleAgeChange}
-            />
-          </label>
-          <label>
-            Gender:
-              <select type="text"
-              value={this.state.selectedCat.gender}
-              onChange={this.handleGenderChange}
-            >
-              <option>Choose gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </label>
-          <button type="submit">save</button>
-          <button type="button" onClick={this.props.onDeleteCat.bind(this)}>delete</button>
-        </form>
-      </div>
+              <form onSubmit={this.props.onSubmitCat.bind(this)}>
+                <label>
+                  Name:
+                    <input type="text"
+                    value={this.state.selectedCat.name}
+                    onChange={this.handleNameChange}
+                  />
+                </label>
+                <label>
+                  Age:
+                    <input type="number"
+                    value={this.state.selectedCat.age}
+                    onChange={this.handleAgeChange}
+                  />
+                </label>
+                <label>
+                  Gender:
+                    <select type="text"
+                    value={this.state.selectedCat.gender}
+                    onChange={this.handleGenderChange}
+                  >
+                    <option>Choose gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </label>
+                <div className="wrapper flex p-10 justify-center">
+                  <button type="submit" className="pointer">save</button>
+                  {this.id !== 'new' &&
+                  <button type="button" className="pointer"
+                  onClick={this.props.onDeleteCat.bind(this)}
+                  >delete
+                  </button>
+                  }
+                </div>
+              </form>
+            </div>
+        }
+      </React.Fragment>
     )
   }
 }
 
 function mapStateToProps(state) {
   return {
-    selectedCat: state.selectedCat
+    selectedCat: state.catR.selectedCat
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
+    onLoad: async () => {
+      await dispatch(actionCreator.loadCats())
+      return Promise.resolve()
+    },
     onEditLoad: (id) => {
       dispatch(actionCreator.selectCat(id))
     },

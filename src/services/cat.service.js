@@ -50,7 +50,7 @@ async function loadCats() {
                 name: 'Jimmy',
                 gender: 'male',
                 age: 3,
-                rank: 14,
+                rank: 783,
                 pic: '/img/jimmy.jpg',
                 clickedInc: false,
                 clickedDec: false,
@@ -64,7 +64,48 @@ async function loadCats() {
                 pic: '/img/lichy.jpg',
                 clickedInc: false,
                 clickedDec: false,
-            }]
+            },
+            {
+                id: '3',
+                name: 'Mizi',
+                gender: 'female',
+                age: 1,
+                rank: 20568,
+                pic: '/img/mizi.jpg',
+                clickedInc: false,
+                clickedDec: false,
+            },
+            {
+                id: '4',
+                name: 'Whiskers',
+                gender: 'female',
+                age: 6,
+                rank: 511,
+                pic: '/img/whiskers.jpg',
+                clickedInc: false,
+                clickedDec: false,
+            },
+            {
+                id: '5',
+                name: 'Leonard',
+                gender: 'male',
+                age: 3,
+                rank: 679,
+                pic: '/img/leonard.jpg',
+                clickedInc: false,
+                clickedDec: false,
+            },
+            {
+                id: '6',
+                name: 'Bianca',
+                gender: 'female',
+                age: 4,
+                rank: 854,
+                pic: '/img/bianca.jpg',
+                clickedInc: false,
+                clickedDec: false,
+            },
+        ]
         storageService.store(key,cats)
     }
     return cats

@@ -6,6 +6,7 @@ export const loadCats = () => {
     return async (dispatch) => {
         const cats = await catService.loadCats()
         dispatch(loadCatsAsync(cats))
+        return Promise.resolve()
     }
 }
 

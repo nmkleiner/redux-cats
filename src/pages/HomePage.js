@@ -11,8 +11,10 @@ class HomePage extends Component {
 
   render() {
     return (
-        <div className="cats-page">
-          homepage under construction
+        <div className="cats-page text-center">
+          <div>
+            <h2 className="capitalize p-10">homepage under construction</h2>
+          </div>
         </div>
     )
   }

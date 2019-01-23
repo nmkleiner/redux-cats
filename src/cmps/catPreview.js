@@ -24,7 +24,7 @@ class CatPreview extends Component {
                     <i className="fas fa-thumbs-up green-text"></i>
                 </button>
             </div>
-            <Link to={'/cat/' + this.props.cat.id}>see more</Link>
+            <Link to={'/redux-cats/cat/' + this.props.cat.id}>see more</Link>
             </div>
         )
     }

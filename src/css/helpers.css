@@ -25,9 +25,7 @@
   .mx-20 {
     margin: 0 20px;
   }
-  .show {
-      visibility: visible;
-  }
+  
   /* Flex */
   
   .flex {
@@ -153,4 +151,11 @@
   /*  visibility */
   .hidden {
     visibility: hidden;
+  }
+  .show {
+    visibility: visible;
+  }
+  /* cursor */
+  .pointer {
+    cursor: pointer;
   }

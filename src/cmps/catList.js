@@ -4,8 +4,8 @@ import CatPreview from './catPreview';
 function CatList(props) {
     return (
         <div className="cat-list">
-            {props.cats.map((cat) =>
-            <CatPreview cat={cat} key={cat.id}/> 
+            {props.cats.sort((a, b) => b.rank - a.rank).map((cat) =>
+                <CatPreview cat={cat} key={cat.id} />
             )}
         </div>
     )
@@ -14,13 +14,13 @@ function CatList(props) {
 
 function mapStateToProps(state) {
     return {
-        cats: state.cats
+        cats: state.catR.cats
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        
+
     }
 }
 

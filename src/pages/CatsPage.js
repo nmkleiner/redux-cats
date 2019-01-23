@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import CatList from '../cmps/catList.js'
 // import { Link } from "react-router-dom";
 import store from '../store/store';
-import { connect } from 'react-redux';
-import * as actionCreator from '../store/actions/actions'
+// import { connect } from 'react-redux';
+// import * as actionCreator from '../store/actions/actions'
 
 
 
 class CatsPage extends Component {
   async componentDidMount() {
-    this.props.onLoad()
   }
 
   render() {
@@ -21,18 +20,16 @@ class CatsPage extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-      cats: state.cats
-  }
-}
+// function mapStateToProps(state) {
+//   return {
+//       // cats: state.catR.cats
+//   }
+// }
 
-function mapDispatchToProps(dispatch) {
-  return {
-      onLoad: () => {
-          dispatch(actionCreator.loadCats())
-      }
-  }
-}
+// function mapDispatchToProps(dispatch) {
+//   return {
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CatsPage)
+// export default connect(mapStateToProps, {})(CatsPage)
+export default CatsPage
