@@ -1,16 +1,16 @@
 {
-  "main.css": "/redux-cats/static/css/main.fa6fab03.chunk.css",
-  "main.js": "/redux-cats/static/js/main.bc4ad66f.chunk.js",
-  "main.js.map": "/redux-cats/static/js/main.bc4ad66f.chunk.js.map",
+  "main.css": "/redux-cats/static/css/main.6fe374e6.chunk.css",
+  "main.js": "/redux-cats/static/js/main.0aab803a.chunk.js",
+  "main.js.map": "/redux-cats/static/js/main.0aab803a.chunk.js.map",
   "static/css/1.6acf9759.chunk.css": "/redux-cats/static/css/1.6acf9759.chunk.css",
   "static/js/1.f5a931ad.chunk.js": "/redux-cats/static/js/1.f5a931ad.chunk.js",
   "static/js/1.f5a931ad.chunk.js.map": "/redux-cats/static/js/1.f5a931ad.chunk.js.map",
   "runtime~main.js": "/redux-cats/static/js/runtime~main.f5fb14ae.js",
   "runtime~main.js.map": "/redux-cats/static/js/runtime~main.f5fb14ae.js.map",
   "static/media/index.css": "/redux-cats/static/media/fa-regular-400.fc5252e5.woff",
-  "static/css/main.fa6fab03.chunk.css.map": "/redux-cats/static/css/main.fa6fab03.chunk.css.map",
   "static/css/1.6acf9759.chunk.css.map": "/redux-cats/static/css/1.6acf9759.chunk.css.map",
+  "static/css/main.6fe374e6.chunk.css.map": "/redux-cats/static/css/main.6fe374e6.chunk.css.map",
   "index.html": "/redux-cats/index.html",
-  "precache-manifest.843036bf5709d45dc8800c3fad8811e9.js": "/redux-cats/precache-manifest.843036bf5709d45dc8800c3fad8811e9.js",
+  "precache-manifest.974a65021c1e78e46e7be6610b722354.js": "/redux-cats/precache-manifest.974a65021c1e78e46e7be6610b722354.js",
   "service-worker.js": "/redux-cats/service-worker.js"
 }
