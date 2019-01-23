@@ -78,6 +78,9 @@ export const sortByRank = (order) => {
     return {type: 'SORT_RANK', order}
 }
 
+export const filterList = (filter) => { 
+    return {type: 'FILTER_LIST', filter}
+}
 
 
 

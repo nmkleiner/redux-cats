@@ -70,21 +70,21 @@ class CatEdit extends Component {
               <form onSubmit={this.props.onSubmitCat.bind(this)}>
                 <label>
                   Name:
-                    <input type="text"
+                  <input type="text"
                     value={this.state.selectedCat.name}
                     onChange={this.handleNameChange}
                   />
                 </label>
                 <label>
                   Age:
-                    <input type="number"
+                  <input type="number"
                     value={this.state.selectedCat.age}
                     onChange={this.handleAgeChange}
                   />
                 </label>
                 <label>
                   Gender:
-                    <select type="text"
+                  <select type="text"
                     value={this.state.selectedCat.gender}
                     onChange={this.handleGenderChange}
                   >

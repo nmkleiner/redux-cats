@@ -49,6 +49,10 @@ class CatPreview extends Component {
                             <i className="fas fa-sort-alpha-down"></i>
                     }
                 </button>
+                <input type="text" 
+                    onChange={this.props.onFilterChange} 
+                    placeholder="search"
+                />
             </div>
         )
     }
@@ -61,6 +65,10 @@ function mapDispatchToProps(dispatch) {
         },
         onSortRankClick: (order) => {
             dispatch(actionCreator.sortByRank(order))
+        },
+        onFilterChange: (ev) => {
+            console.log(ev.target.value)
+            dispatch(actionCreator.filterList(ev.target.value))
         },
 
     }

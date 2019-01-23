@@ -4,6 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .cat-filter button {
@@ -13,4 +14,9 @@
     color: white;
     border: grey 2px solid;
     cursor: pointer;
+    padding: 1px 5px;
+}
+
+.cat-filter input {
+    padding: 12px 10px;
 }

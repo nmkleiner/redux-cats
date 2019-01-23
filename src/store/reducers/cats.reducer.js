@@ -5,7 +5,8 @@ const initialState = {
     cats: [{ name: 'baba', id: 1 }, { name: 'mama', id: 2 }],
     selectedCat: {},
     sortName: null,
-    sortRank: null
+    sortRank: null,
+    filter: ''
 }
 
 const catReducer = (state = initialState, action) => {
@@ -22,11 +23,17 @@ const catReducer = (state = initialState, action) => {
                 sortRank: null
                 
             }
-            case 'SORT_RANK':
+        case 'SORT_RANK':
             return {
                 ...state,
                 sortName: null,
                 sortRank: action.order
+            }
+        case 'FILTER_LIST':
+        console.log()
+            return {
+                ...state,
+                filter: action.filter
             }
         case 'INCREMENT_RANK':
             return {
