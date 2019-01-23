@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/redux-cats/static/media/fa-solid-900.8086e197.woff2"
   },
   {
-    "revision": "dfb39c73a919c8ae6d12",
-    "url": "/redux-cats/static/css/main.e5f445e0.chunk.css"
+    "revision": "53c1eedcf435d5a04f70",
+    "url": "/redux-cats/static/css/main.4bb1157b.chunk.css"
   },
   {
     "revision": "27603739fe78fee587c7b84873475b61",
     "url": "/redux-cats/static/media/fa-solid-900.27603739.svg"
   },
   {
-    "revision": "c3ea152e295eba65af9c",
-    "url": "/redux-cats/static/js/1.c3ea152e.chunk.js"
+    "revision": "9fd3fac5280c7da4088f",
+    "url": "/redux-cats/static/js/1.9fd3fac5.chunk.js"
   },
   {
     "revision": "f5fb14aec96d69cf5458",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/redux-cats/static/media/fa-brands-400.b89c6c51.woff2"
   },
   {
-    "revision": "dfb39c73a919c8ae6d12",
-    "url": "/redux-cats/static/js/main.dfb39c73.chunk.js"
+    "revision": "53c1eedcf435d5a04f70",
+    "url": "/redux-cats/static/js/main.53c1eedc.chunk.js"
   },
   {
     "revision": "dd4ff1196905f0585aef2c80486869e9",
@@ -76,11 +76,11 @@ self.__precacheManifest = [
     "url": "/redux-cats/static/media/fa-brands-400.fef43c1f.svg"
   },
   {
-    "revision": "c3ea152e295eba65af9c",
-    "url": "/redux-cats/static/css/1.28193442.chunk.css"
+    "revision": "9fd3fac5280c7da4088f",
+    "url": "/redux-cats/static/css/1.6acf9759.chunk.css"
   },
   {
-    "revision": "92fa1faca2011e707aecd7ee75ee3af7",
+    "revision": "02a6828fd1e57e8346b5327f0d41141c",
     "url": "/redux-cats/index.html"
   }
 ];
