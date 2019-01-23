@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CatList from '../cmps/catList.js'
-// import { Link } from "react-router-dom";
+import CatFilter from '../cmps/catFilter.js'
 import store from '../store/store';
 // import { connect } from 'react-redux';
 // import * as actionCreator from '../store/actions/actions'
@@ -8,12 +8,11 @@ import store from '../store/store';
 
 
 class CatsPage extends Component {
-  async componentDidMount() {
-  }
 
   render() {
     return (
         <div className="cats-page">
+            <CatFilter store={store}/>
             <CatList store={store}/>
         </div>
     )

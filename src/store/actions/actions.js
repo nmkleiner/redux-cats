@@ -45,7 +45,6 @@ export const incrementRank = (id) => {
         updatedCat.rank++
         updatedCat.clickedInc = (!updatedCat.clickedDec)? true : false;
         updatedCat.clickedDec = false
-        console.log(updatedCat)
         await catService.updateCat(updatedCat)
         dispatch(updateCatAsync(updatedCat))
         dispatch(incrementRankAsync(id))
@@ -60,7 +59,6 @@ export const decrementRank = (id) => {
         updatedCat.rank--
         updatedCat.clickedDec = (!updatedCat.clickedInc) ? true : false
         updatedCat.clickedInc = false
-        console.log(updatedCat)
         await catService.updateCat(updatedCat)
         dispatch(updateCatAsync(updatedCat))
         dispatch(decrementRankAsync(id))
@@ -71,10 +69,14 @@ export const decrementRank = (id) => {
 export const selectCat = (id) => {
     return { type: 'SELECT_CAT', id }
 }
-// export const decrementRank = (id) => {
-//     return { type: 'DECREMENT_RANK', id }
 
-// }
+export const sortByName = (order) => { 
+    return {type: 'SORT_NAME', order}
+}
+
+export const sortByRank = (order) => { 
+    return {type: 'SORT_RANK', order}
+}
 
 
 

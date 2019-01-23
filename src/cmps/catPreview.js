@@ -9,7 +9,7 @@ class CatPreview extends Component {
             <div className="cat-preview">
             <img src={process.env.PUBLIC_URL + this.props.cat.pic} alt="cat"/>
             <p>Name: {this.props.cat.name}</p>
-            <p>Rank: {this.props.cat.rank}</p>
+            <p>Likes: {this.props.cat.rank}</p>
             <div className="flex">
                 <button 
                     disabled={this.props.cat.clickedDec} 
