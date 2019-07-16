@@ -1,5 +1,3 @@
-import storageService from './storage.service';
-// import utilService from './util.service';
 import axios from 'axios'
 
 export default {
@@ -9,13 +7,12 @@ export default {
     getCatById,
     loadCats,
 }
-const key = 'cats';
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:3030';
 
 async function addCat(addedCat) {
     return axios.post(`${BASE_URL}/cats`, {
         headers: {
-            'Content-Type':'application/json',
+            'Content-Type': 'application/json',
         },
         addedCat
     })
@@ -24,11 +21,10 @@ async function addCat(addedCat) {
 async function updateCat(updatedCat) {
     return axios.put(`${BASE_URL}/cats`, {
         headers: {
-            'Content-Type':'application/json',
+            'Content-Type': 'application/json',
         },
         updatedCat
     })
-    // return Promise.resolve()
 }
 
 async function deleteCat(catId) {
